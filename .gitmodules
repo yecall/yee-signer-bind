@@ -1,0 +1,3 @@
+[submodule "yee-signer"]
+	path = yee-signer
+	url = https://github.com/yeeco/yee-signer
