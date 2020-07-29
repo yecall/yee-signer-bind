@@ -1,4 +1,4 @@
-# Yee signer
+# Yee signer bind
 
 Yee signer is a library to process schnorrkel signature and verification.
 
