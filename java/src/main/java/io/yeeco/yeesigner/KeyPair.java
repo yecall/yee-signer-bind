@@ -9,6 +9,17 @@ public class KeyPair {
 
     private long pointer;
 
+    public static KeyPair generate() throws SignerException {
+
+        byte[] error = new byte[1];
+        long pointer = JNI.keyPairGenerate(error);
+        ErrorUtils.checkErrorCode(error[0]);
+
+        KeyPair instance = new KeyPair();
+        instance.pointer = pointer;
+        return instance;
+    }
+
     public static KeyPair fromMiniSecretKey(byte[] miniSecretKey) throws SignerException {
 
         byte[] error = new byte[1];

@@ -2,6 +2,8 @@ package io.yeeco.yeesigner;
 
 public class JNI {
 
+    public native static long keyPairGenerate(byte[] error);
+
     public native static long keyPairFromMiniSecretKey(byte[] miniSecretKey, byte[] error);
 
     public native static long keyPairFromSecretKey(byte[] secretKey, byte[] error);
@@ -39,5 +41,9 @@ public class JNI {
     public native static long txDecode(byte[] raw, byte[] error);
 
     public native static void verifyTx(long tx, byte[] currentHash, byte[] error);
+
+    public native static long addressEncode(byte[] public_key, byte[] hrp, byte[] error);
+
+    public native static void addressDecode(byte[] address, long[] public_key_pointer, long[] hrp_pointer, byte[] error);
 
 }

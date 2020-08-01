@@ -20,6 +20,16 @@ sh build.sh
 
 ## Usage
 
+### Keypair generate
+```java
+KeyPair keyPair = KeyPair.generate();
+
+byte[] publicKey = keyPair.getPublicKey();
+
+byte[] secretKey = keyPair.getSecretKey();
+
+```
+
 ### Sign and verify
 
 ```java

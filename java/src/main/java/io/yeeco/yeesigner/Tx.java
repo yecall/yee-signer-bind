@@ -33,22 +33,7 @@ public class Tx {
         long vecPointer = JNI.txEncode(pointer, error);
         ErrorUtils.checkErrorCode(error[0]);
 
-        byte[] encode = null;
-
-        try {
-            int vecLen = (int) JNI.vecLen(vecPointer, error);
-            ErrorUtils.checkErrorCode(error[0]);
-
-            encode = new byte[vecLen];
-            JNI.vecCopy(vecPointer, encode, error);
-            ErrorUtils.checkErrorCode(error[0]);
-
-        }catch (SignerException e){
-            throw e;
-        } finally {
-            JNI.vecFree(vecPointer, error);
-            ErrorUtils.checkErrorCode(error[0]);
-        }
+        byte[] encode = Utils.copyAndFreeVec(vecPointer, error);
 
         return encode;
     }
