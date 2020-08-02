@@ -10,6 +10,7 @@
 #import "libyee_signer.h"
 #import "ErrorUtils.h"
 #import "Call.h"
+#import "Utils.h"
 
 @interface Transaction ()
 
@@ -54,35 +55,18 @@
     
     unsigned int err = 0;
     
-    unsigned int* vec_pointer = yee_signer_tx_encode(self.pointer, &err);
+    unsigned int* vecPointer = yee_signer_tx_encode(self.pointer, &err);
     if(err > 0) {
         *error = [ErrorUtils error:err];
         return nil;
     }
     
-    unsigned int vec_len = yee_signer_vec_len(vec_pointer, &err);
-    if(err > 0) {
-        *error = [ErrorUtils error:err];
-        yee_signer_vec_free(vec_pointer, &err);
-        return nil;
-    }
-    
-    unsigned char buffer[vec_len];
-    yee_signer_vec_copy(vec_pointer, buffer, vec_len, &err);
-    if(err > 0) {
-        *error = [ErrorUtils error:err];
-        yee_signer_vec_free(vec_pointer, &err);
-        return nil;
-    }
-    
-    // free vec
-    yee_signer_vec_free(vec_pointer, &err);
+    NSData *data = [Utils copyAndFreeVec:vecPointer error:&err];
     if(err > 0) {
         *error = [ErrorUtils error:err];
         return nil;
     }
     
-    NSData* data = [NSData dataWithBytes:(const void *)buffer length:vec_len];
     return data;
 }
 

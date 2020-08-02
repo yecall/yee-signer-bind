@@ -86,3 +86,26 @@ NSData* encode = [tx encode: &error];
 [tx free: &error];
 
 ```
+
+### Address codec
+
+```objective-c
+
+// encode
+NSError* error = nil;
+    
+NSData* publicKey = [NSData fromHex:@"0001020304050607080900010203040506070809000102030405060708090001"];
+
+NSString* hrp = @"yee";
+
+NSString* address = [Address encode:publicKey hrp:hrp error:&error];
+
+// decode
+NSData* publicKey = nil;
+NSString* hrp = nil;
+
+[Address decode:address publicKey:&publicKey hrp:&hrp error:&error];
+
+
+```
+

@@ -84,3 +84,20 @@ byte[] encode = tx.encode();
 
 ```
 
+
+### Address codec
+```java
+
+// encode
+byte[] publicKey = Hex.decodeHex("0001020304050607080900010203040506070809000102030405060708090001");
+
+String address = Address.encode(publicKey, "yee");
+
+// decode
+Pair<byte[], String> publicAndHrp = Address.decode(address);
+
+byte[] publicKey = publicAndHrp.getValue0();
+String hrp = publicAndHrp.getValue1();
+
+
+```

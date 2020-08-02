@@ -3,6 +3,18 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+void yee_signer_address_decode(const unsigned char *address,
+                               unsigned int address_len,
+                               unsigned int **public_key_pointer,
+                               unsigned int **hrp_pointer,
+                               unsigned int *error);
+
+unsigned int *yee_signer_address_encode(const unsigned char *public_key,
+                                        unsigned int public_key_len,
+                                        const unsigned char *hrp,
+                                        unsigned int hrp_len,
+                                        unsigned int *error);
+
 unsigned int *yee_signer_build_call(const unsigned char *json,
                                     unsigned int json_len,
                                     unsigned int *error);
@@ -28,6 +40,8 @@ unsigned int *yee_signer_key_pair_from_mini_secret_key(const unsigned char *mini
 unsigned int *yee_signer_key_pair_from_secret_key(const unsigned char *secret_key,
                                                   unsigned int secret_key_len,
                                                   unsigned int *err);
+
+unsigned int *yee_signer_key_pair_generate(unsigned int *err);
 
 void yee_signer_public_key(unsigned int *key_pair,
                            unsigned char *out,
