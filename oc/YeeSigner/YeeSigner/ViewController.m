@@ -13,6 +13,7 @@
 #import "Verifier.h"
 #import "Call.h"
 #import "Transaction.h"
+#import "Address.h"
 
 @interface ViewController ()
 
@@ -23,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self testGenerate];
     
     [self testFromMiniSecretKey];
     
@@ -43,7 +46,30 @@
     [self testVerifyTx2];
 
     [self testVerifyTxFail];
+    
+    [self testAddressEncode];
+    
+    [self testAddressEncodeFail];
+    
+    [self testAddressDecode];
+    
+    [self testAddressDecodeFail];
 
+}
+
+- (void)testGenerate {
+    
+    NSError* error = nil;
+    
+    KeyPair* keyPair = [KeyPair generate: &error];
+        
+    NSData *publicKey = [keyPair publicKey:&error];
+        
+    NSAssert(publicKey.length == 32, @"");
+    
+    NSData *secretKey = [keyPair secretKey:&error];
+    
+    NSAssert(secretKey.length == 64, @"");
 }
 
 - (void)testFromMiniSecretKey {
@@ -280,6 +306,65 @@
     NSAssert(!verified, @"");
      
     [tx free: &error];
+    
+}
+
+- (void) testAddressEncode {
+    
+    NSError* error = nil;
+    
+    NSData* publicKey = [NSData fromHex:@"0001020304050607080900010203040506070809000102030405060708090001"];
+
+    NSString* hrp = @"yee";
+    
+    NSString* address = [Address encode:publicKey hrp:hrp error:&error];
+    
+    NSAssert([address isEqualToString:@"yee1qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsz6e3hh"], @"");
+    
+}
+
+- (void) testAddressEncodeFail {
+    
+    NSError* error = nil;
+    
+    NSData* publicKey = [NSData fromHex:@"000102030405060708090001020304050607080900010203040506070809000102"];
+
+    NSString* hrp = @"yee";
+    
+    NSString* address = [Address encode:publicKey hrp:hrp error:&error];
+    
+    NSAssert(error.code==10, @"");
+    
+}
+
+- (void) testAddressDecode {
+    
+    NSError* error = nil;
+    
+    NSString* address = @"yee1qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsz6e3hh";
+
+    NSData* publicKey = nil;
+    NSString* hrp = nil;
+    
+    [Address decode:address publicKey:&publicKey hrp:&hrp error:&error];
+    
+    NSAssert([[publicKey toHex] isEqualToString:@"0001020304050607080900010203040506070809000102030405060708090001"], @"");
+    NSAssert([hrp isEqualToString:@"yee"], @"");
+    
+}
+
+- (void) testAddressDecodeFail {
+    
+    NSError* error = nil;
+    
+    NSString* address = @"abc1qqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsyqcyq5rqwzqfqqqsdsk2fh";
+
+    NSData* publicKey = nil;
+    NSString* hrp = nil;
+    
+    [Address decode:address publicKey:&publicKey hrp:&hrp error:&error];
+    
+    NSAssert(error.code==11, @"");
     
 }
 

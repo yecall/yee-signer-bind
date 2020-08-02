@@ -23,6 +23,21 @@ const unsigned int SECRET_KEY_LENGTH = 64;
 const unsigned int PUBLIC_KEY_LENGTH = 32;
 const unsigned int SIGNATURE_LENGTH = 64;
 
++ (KeyPair *) generate: (NSError **)error {
+    
+    unsigned int err = 0;
+    unsigned int* pointer = yee_signer_key_pair_generate(&err);
+    if(err > 0) {
+        *error = [ErrorUtils error:err];
+        return nil;
+    }
+    
+    KeyPair* keyPair = [KeyPair alloc];
+    keyPair.pointer = pointer;
+    return keyPair;
+    
+}
+
 + (KeyPair *) fromMiniSecretKey:(NSData* ) miniSecretKey error:(NSError **)error{
         
     unsigned int err = 0;

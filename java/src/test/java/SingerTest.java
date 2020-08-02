@@ -37,6 +37,19 @@ public class SingerTest {
     }
 
     @Test
+    public void testKeyPairGenerate() throws Exception {
+
+        KeyPair keyPair = KeyPair.generate();
+
+        byte[] publicKey = keyPair.getPublicKey();
+        assertEquals(publicKey.length, 32);
+
+        byte[] secretKey = keyPair.getSecretKey();
+        assertEquals(secretKey.length, 64);
+
+    }
+
+    @Test
     public void testKeyPairFromMiniSecretKey() throws Exception {
 
         byte[] miniSecretKey = Hex.decodeHex("579d7aa286b37b800b95fe41adabbf0c2a577caf2854baeca98f8fb242ff43ae");

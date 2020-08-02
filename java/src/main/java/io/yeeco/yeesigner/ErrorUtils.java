@@ -15,6 +15,8 @@ public class ErrorUtils {
         put((byte) 7, "invalid method");
         put((byte) 8, "invalid tx");
         put((byte) 9, "invalid json");
+        put((byte) 10, "address encode error");
+        put((byte) 11, "address decode error");
     }};
 
     public static void checkErrorCode(byte code) throws SignerException {

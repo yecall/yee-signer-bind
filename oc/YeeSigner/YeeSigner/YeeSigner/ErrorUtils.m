@@ -21,6 +21,8 @@
         @7: @"invalid method",
         @8: @"invalid tx",
         @9: @"invalid json",
+        @10: @"address encode error",
+        @11: @"address decode error",
     };
     
     NSString *message = [dict objectForKey:@(err)];

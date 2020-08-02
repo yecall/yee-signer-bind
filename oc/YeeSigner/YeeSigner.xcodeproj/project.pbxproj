@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26448FE824D65EA6002D6FB9 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 26448FE724D65EA6002D6FB9 /* Address.m */; };
+		26448FEB24D66090002D6FB9 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 26448FEA24D66090002D6FB9 /* Utils.m */; };
 		264D059424B8074700C45ED9 /* Call.m in Sources */ = {isa = PBXBuildFile; fileRef = 264D059324B8074700C45ED9 /* Call.m */; };
 		264D059724B80D8100C45ED9 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 264D059624B80D8100C45ED9 /* Transaction.m */; };
 		26DAD334249DD91C00E0ADB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DAD333249DD91C00E0ADB4 /* AppDelegate.m */; };
@@ -43,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26448FE624D65EA6002D6FB9 /* Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		26448FE724D65EA6002D6FB9 /* Address.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		26448FE924D66090002D6FB9 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		26448FEA24D66090002D6FB9 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		264D059224B8074700C45ED9 /* Call.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Call.h; sourceTree = "<group>"; };
 		264D059324B8074700C45ED9 /* Call.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Call.m; sourceTree = "<group>"; };
 		264D059524B80D8100C45ED9 /* Transaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
@@ -187,6 +193,10 @@
 				264D059324B8074700C45ED9 /* Call.m */,
 				264D059524B80D8100C45ED9 /* Transaction.h */,
 				264D059624B80D8100C45ED9 /* Transaction.m */,
+				26448FE624D65EA6002D6FB9 /* Address.h */,
+				26448FE724D65EA6002D6FB9 /* Address.m */,
+				26448FE924D66090002D6FB9 /* Utils.h */,
+				26448FEA24D66090002D6FB9 /* Utils.m */,
 			);
 			path = YeeSigner;
 			sourceTree = "<group>";
@@ -323,6 +333,8 @@
 			files = (
 				26DAD33A249DD91C00E0ADB4 /* ViewController.m in Sources */,
 				26DAD379249DEA7E00E0ADB4 /* NSData+HexString.m in Sources */,
+				26448FE824D65EA6002D6FB9 /* Address.m in Sources */,
+				26448FEB24D66090002D6FB9 /* Utils.m in Sources */,
 				26DAD382249DFF7000E0ADB4 /* ErrorUtils.m in Sources */,
 				264D059424B8074700C45ED9 /* Call.m in Sources */,
 				26DAD334249DD91C00E0ADB4 /* AppDelegate.m in Sources */,

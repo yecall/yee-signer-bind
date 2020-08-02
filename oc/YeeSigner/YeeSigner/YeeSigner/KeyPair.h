@@ -10,6 +10,8 @@
 
 @interface KeyPair : NSObject
 
++ (KeyPair *) generate: (NSError **)error;
+
 + (KeyPair *) fromMiniSecretKey:(NSData* ) miniSecretKey error:(NSError **)error;
 
 + (KeyPair *) fromSecretKey:(NSData* ) secretKey error:(NSError **)error;

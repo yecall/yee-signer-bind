@@ -9,6 +9,14 @@ extern "C" {
 #endif
 /*
  * Class:     io_yeeco_yeesigner_JNI
+ * Method:    keyPairGenerate
+ * Signature: ([B)J
+ */
+JNIEXPORT jlong JNICALL Java_io_yeeco_yeesigner_JNI_keyPairGenerate
+  (JNIEnv *, jclass, jbyteArray);
+
+/*
+ * Class:     io_yeeco_yeesigner_JNI
  * Method:    keyPairFromMiniSecretKey
  * Signature: ([B[B)J
  */
@@ -113,14 +121,6 @@ JNIEXPORT void JNICALL Java_io_yeeco_yeesigner_JNI_txFree
 
 /*
  * Class:     io_yeeco_yeesigner_JNI
- * Method:    txLength
- * Signature: (J[B)J
- */
-JNIEXPORT jlong JNICALL Java_io_yeeco_yeesigner_JNI_txLength
-  (JNIEnv *, jclass, jlong, jbyteArray);
-
-/*
- * Class:     io_yeeco_yeesigner_JNI
  * Method:    txEncode
  * Signature: (J[B)J
  */
@@ -166,6 +166,22 @@ JNIEXPORT jlong JNICALL Java_io_yeeco_yeesigner_JNI_txDecode
  */
 JNIEXPORT void JNICALL Java_io_yeeco_yeesigner_JNI_verifyTx
   (JNIEnv *, jclass, jlong, jbyteArray, jbyteArray);
+
+/*
+ * Class:     io_yeeco_yeesigner_JNI
+ * Method:    addressEncode
+ * Signature: ([B[B[B)J
+ */
+JNIEXPORT jlong JNICALL Java_io_yeeco_yeesigner_JNI_addressEncode
+  (JNIEnv *, jclass, jbyteArray, jbyteArray, jbyteArray);
+
+/*
+ * Class:     io_yeeco_yeesigner_JNI
+ * Method:    addressDecode
+ * Signature: ([B[J[J[B)V
+ */
+JNIEXPORT void JNICALL Java_io_yeeco_yeesigner_JNI_addressDecode
+  (JNIEnv *, jclass, jbyteArray, jlongArray, jlongArray, jbyteArray);
 
 #ifdef __cplusplus
 }
