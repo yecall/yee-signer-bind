@@ -1,0 +1,24 @@
+{
+  "name": "yee-signer-purejs",
+  "version": "0.1.0",
+  "description": "Yee signer pure js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.3.0",
+    "babel-preset-env": "^1.7.0",
+    "install": "^0.13.0",
+    "jest": "^26.3.0",
+    "npm": "^6.14.7",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "dependencies": {
+    "bech32": "^1.1.4"
+  }
+}
