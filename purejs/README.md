@@ -2,10 +2,10 @@
 
 Tx decoder
 
-## Install
+## Build
 
 ```
-npm install yee-signer-purejs
+npm pack
 ```
 
 ## Test
