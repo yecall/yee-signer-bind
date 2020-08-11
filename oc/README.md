@@ -12,6 +12,7 @@ cargo install cargo-lipo
 
 ### Build
 ```
+cd ../yee-signer
 sh build.sh
 ```
 
