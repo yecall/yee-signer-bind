@@ -40,6 +40,8 @@
     [self testBuildTx];
     
     [self testBuildTx2];
+    
+    [self testBuildTx3];
 
     [self testVerifyTx];
     
@@ -215,6 +217,46 @@
 }
 
 - (void)testBuildTx2 {
+    
+    NSError* error = nil;
+    
+    // params json
+    // dest:  address: 33 bytes, 0xFF + public key
+    // value: transfer value
+    NSString *json = @"{\"module\":4, \"method\":0, \"params\":{\"dest\":\"yee1jfakj2rvqym79lmxcmjkraep6tn296deyspd9mkh467u4xgqt3cqmtaf9v\",\"value\":1000}}";
+    Call* call = [Call buildCall:json error:&error];
+    
+    // sender secret key
+    NSData* secretKey = [NSData fromHex:@"0b58d672927e01314d624fcb834a0f04b554f37640e0a4c342029a996ec1450bac8afb286e210d3afbfb8fd429129bd33329baaea6b919c92651c072c59d2408"];
+
+    // sender nonce
+    u_long nonce = 0;
+
+    // era period: use 64
+    u_long period = 64;
+
+    // era current: the block number of the best block
+    u_long current = 26491;
+
+    // era current hash: the block hash of the best block
+    NSData* currentHash = [NSData fromHex:@"c561eb19e88ce3728776794a9479e41f3ca4a56ffd01085ed4641bd608ecfe13"];
+
+    Transaction* tx = [Transaction buildTx:secretKey nonce:nonce period:period current:current current_hash:currentHash call:call error:&error];
+    
+    // get the raw tx
+    NSData* encode = [tx encode: &error];
+
+    NSAssert(encode.length == 140, @"");
+    
+//    NSLog(@"%@", [encode toHex]);
+    
+    [call free: &error];
+    
+    [tx free: &error];
+    
+}
+
+- (void)testBuildTx3 {
     
     NSError* error = nil;
     

@@ -61,6 +61,10 @@ verifier.verify(signature, message);
 // dest:  address: 33 bytes, 0xFF + public key
 // value: transfer value
 String json = "{\"module\":4, \"method\":0, \"params\":{\"dest\":\"0xFF927b69286c0137e2ff66c6e561f721d2e6a2e9b92402d2eed7aebdca99005c70\",\"value\":1000}}";
+
+// or dest: address: bech32 address
+json = "{\"module\":4, \"method\":0, \"params\":{\"dest\":\"yee1jfakj2rvqym79lmxcmjkraep6tn296deyspd9mkh467u4xgqt3cqmtaf9v\",\"value\":1000}}";
+
 Call call = Call.newCall(json);
 
 // sender secret key: 64 bytes
