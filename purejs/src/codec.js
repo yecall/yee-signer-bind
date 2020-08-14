@@ -90,5 +90,6 @@ export {
     bytesToHex,
     compactEncode,
     compactDecode,
+    leToNumber,
 }
 

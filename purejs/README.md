@@ -2,10 +2,10 @@
 
 Tx decoder
 
-## Build
+## Install
 
 ```
-npm pack
+npm i yee-signer-purejs
 ```
 
 ## Test
@@ -23,26 +23,31 @@ npm run test
 
 let raw = hexToBytes("0x390281ff44a5fbc7fff3cb26358e6070fbe7e171f978a5bf6de3dcc7ba359bb783916d446ee29d8f6a375c31ad49e990ef55901dc1211424bc2bf00345aa8846aeef733ced73a13c88e74c2c5d66ba6fe4d13eaadfc27e03a5b9c293e6123ef8d8cad80600d5020400ff36b116bcdeff6bf63539cea3cafdd90bb53d6df043b2ef791d234c92ca5de8040700d0ed902e")
 
-let tx = txDecode(raw)
+let tx = txDecode(raw, Network.Mainnet, 4)
 
 // tx: 
 // {
 //     signature:
-//     {
-//         sender: 'yee1gjjlh3ll709jvdvwvpc0helpw8uh3fdldh3ae3a6xkdm0qu3d4zqg2d5d3',
-//         signature: '0x6ee29d8f6a375c31ad49e990ef55901dc1211424bc2bf00345aa8846aeef733ced73a13c88e74c2c5d66ba6fe4d13eaadfc27e03a5b9c293e6123ef8d8cad806',
-//         nonce: 0
-//     },
-//     call:
-//     {
-//         module: 4,
-//         method: 0,
-//         params:
 //         {
-//             dest: 'yee1x6c3d0x7la4lvdfee63u4lwepw6n6m0sgwew77gaydxf9jjaaqzqzzu8dj',
-//             value: 200000000000
+//             sender: "0xff44a5fbc7fff3cb26358e6070fbe7e171f978a5bf6de3dcc7ba359bb783916d44",
+//             sender_address: "yee1gjjlh3ll709jvdvwvpc0helpw8uh3fdldh3ae3a6xkdm0qu3d4zqg2d5d3",
+//             sender_shard_num: 0,
+//             signature:
+//                 '0x6ee29d8f6a375c31ad49e990ef55901dc1211424bc2bf00345aa8846aeef733ced73a13c88e74c2c5d66ba6fe4d13eaadfc27e03a5b9c293e6123ef8d8cad806',
+//             nonce: 0
+//         },
+//     call:
+//         {
+//             module: 4,
+//             method: 0,
+//             params:
+//                 {
+//                     dest: "0xff36b116bcdeff6bf63539cea3cafdd90bb53d6df043b2ef791d234c92ca5de804",
+//                     dest_address: "yee1x6c3d0x7la4lvdfee63u4lwepw6n6m0sgwew77gaydxf9jjaaqzqzzu8dj",
+//                     dest_shard_num: 0,
+//                     value: 200000000000
+//                 }
 //         }
-//     }
 // }
 
 ```

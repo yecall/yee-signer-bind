@@ -1,4 +1,4 @@
-import {bytesToHex, compactDecode} from "./codec"
+import {bytesToHex, compactDecode, leToNumber} from "./codec"
 import bech32 from 'bech32'
 
 var Network = {
@@ -6,7 +6,7 @@ var Network = {
     Mainnet: 'mainnet',
 }
 
-function address(buf, network) {
+function address_for_account(buf, network) {
 
     let hrp = network == Network.Testnet ? 'tyee' : 'yee'
 
@@ -17,7 +17,41 @@ function address(buf, network) {
     return buf
 }
 
-function balancesTransferParamsDecode(buf, network) {
+function shard_num_for_account(buf, shard_count) {
+    buf = buf.slice(1)
+    let len = buf.length;
+    if (len < 2) {
+        return ''
+    }
+    if (shard_count == 0) {
+        return ''
+    }
+    let digits = log2(shard_count)
+    if (pow2(digits) != shard_count) {
+        return ''
+    }
+
+    let a = leToNumber([buf[len-1], buf[len-2]])
+    let mask = ~(~0 << digits)
+    let result = a & mask
+    return result
+}
+
+function log2(n) {
+    let s = n
+    let i = 0
+    while (s > 0) {
+        s = s >> 1
+        i = i + 1
+    }
+    return i - 1
+}
+
+function pow2(n) {
+    return 1 << n
+}
+
+function balancesTransferParamsDecode(buf, network, shard_count) {
 
     if (buf[0] != 0xFF) {
         return ''
@@ -29,7 +63,9 @@ function balancesTransferParamsDecode(buf, network) {
     value = value[0]
 
     return {
-        dest: address(dest, network),
+        dest: '0x' + bytesToHex(dest),
+        dest_address: address_for_account(dest, network),
+        dest_shard_num: shard_num_for_account(dest, shard_count),
         value: value,
     }
 }
@@ -37,7 +73,7 @@ function balancesTransferParamsDecode(buf, network) {
 function relayTransferParamsDecode(buf, network) {
 
     let relayType = buf[0]
-    relayType = relayType == 0 ? 'Balance' : ( relayType ==1 ? 'Assets' : '' )
+    relayType = relayType == 0 ? 'Balance' : (relayType == 1 ? 'Assets' : '')
     if (!relayType) {
         return ''
     }
@@ -70,7 +106,7 @@ function relayTransferParamsDecode(buf, network) {
     }
 }
 
-function txDecode(raw, network) {
+function txDecode(raw, network, shard_count) {
 
     if (!raw) {
         return ''
@@ -116,7 +152,9 @@ function txDecode(raw, network) {
         raw = raw.slice(2)
 
         signature = {
-            sender: address(sender, network),
+            sender: '0x' + bytesToHex(sender),
+            sender_address: address_for_account(sender, network),
+            sender_shard_num: shard_num_for_account(sender, shard_count),
             signature: '0x' + bytesToHex(sig),
             nonce: nonce,
         }
@@ -131,7 +169,7 @@ function txDecode(raw, network) {
     let params
 
     if (module == 4 && method == 0) {
-        params = balancesTransferParamsDecode(raw, network)
+        params = balancesTransferParamsDecode(raw, network, shard_count)
     } else if (module == 9 && method == 0) {
         params = relayTransferParamsDecode(raw, network)
     } else {
@@ -152,5 +190,6 @@ function txDecode(raw, network) {
 
 export {
     txDecode,
+    shard_num_for_account,
     Network,
 }
