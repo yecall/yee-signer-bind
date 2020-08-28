@@ -14,15 +14,33 @@
     <SUITE FILE_PATH="coverage/yeesigner$SingerTest.ic" NAME="SingerTest Coverage Results" MODIFIED="1592647669046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="192">
-                <caret line="65" column="122" selection-start-line="65" selection-start-column="60" selection-end-line="65" selection-end-column="122" />
+              <first_editor relative-caret-position="617">
+                <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TxTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TxTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="830">
+              <caret line="125" column="28" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -47,6 +65,7 @@
       <find>module</find>
       <find>charset</find>
       <find>pubic String</find>
+      <find>b503</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -85,12 +104,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="yeesigner" type="b2602c69:ProjectViewProjectNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yeesigner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yeesigner" type="b2602c69:ProjectViewProjectNode" />
@@ -114,9 +141,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -156,43 +180,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AddressTest.testAddressDecodeFailed">
+  <component name="RunManager" selected="JUnit.TxTest.testBuildTx">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="AddressTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yeesigner" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddressTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="AddressTest.testAddressDecode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="yeesigner" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddressTest" />
-      <option name="METHOD_NAME" value="testAddressDecode" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
     </configuration>
     <configuration name="AddressTest.testAddressDecodeFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yeesigner" />
@@ -211,13 +201,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="AddressTest.testAddressEncode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AddressTest.testAddressEncodeFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yeesigner" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AddressTest" />
-      <option name="METHOD_NAME" value="testAddressEncode" />
+      <option name="METHOD_NAME" value="testAddressEncodeFailed" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -228,13 +218,47 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="AddressTest.testAddressEncodeFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TxTest.testBuildTx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yeesigner" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddressTest" />
-      <option name="METHOD_NAME" value="testAddressEncodeFailed" />
+      <option name="MAIN_CLASS_NAME" value="TxTest" />
+      <option name="METHOD_NAME" value="testBuildTx" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TxTest.testBuildTx3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yeesigner" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TxTest" />
+      <option name="METHOD_NAME" value="testBuildTx3" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TxTest.testVerifyTx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yeesigner" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TxTest" />
+      <option name="METHOD_NAME" value="testVerifyTx" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -284,19 +308,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.AddressTest.testAddressEncode" />
-      <item itemvalue="JUnit.AddressTest" />
-      <item itemvalue="JUnit.AddressTest.testAddressDecode" />
       <item itemvalue="JUnit.AddressTest.testAddressEncodeFailed" />
       <item itemvalue="JUnit.AddressTest.testAddressDecodeFailed" />
+      <item itemvalue="JUnit.TxTest.testVerifyTx" />
+      <item itemvalue="JUnit.TxTest.testBuildTx3" />
+      <item itemvalue="JUnit.TxTest.testBuildTx" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TxTest.testBuildTx" />
+        <item itemvalue="JUnit.TxTest.testBuildTx3" />
+        <item itemvalue="JUnit.TxTest.testVerifyTx" />
         <item itemvalue="JUnit.AddressTest.testAddressDecodeFailed" />
         <item itemvalue="JUnit.AddressTest.testAddressEncodeFailed" />
-        <item itemvalue="JUnit.AddressTest.testAddressDecode" />
-        <item itemvalue="JUnit.AddressTest" />
-        <item itemvalue="JUnit.AddressTest.testAddressEncode" />
       </list>
     </recent_temporary>
   </component>
@@ -334,16 +358,14 @@
       <workItem from="1597231357207" duration="741000" />
       <workItem from="1597232146845" duration="14000" />
       <workItem from="1597232170269" duration="1055000" />
+      <workItem from="1597401505138" duration="49000" />
+      <workItem from="1597980250467" duration="39000" />
+      <workItem from="1598063255175" duration="39000" />
+      <workItem from="1598580448599" duration="4103000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AddressTest_testAddressEncode - 2020.08.01 at 10h 32m 24s.xml">
-      <configuration name="AddressTest.testAddressEncode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AddressTest_testAddressEncode - 2020.08.01 at 10h 34m 35s.xml">
-      <configuration name="AddressTest.testAddressEncode" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AddressTest_testAddressEncode - 2020.08.01 at 10h 34m 50s.xml">
       <configuration name="AddressTest.testAddressEncode" configurationId="JUnit" />
     </history-entry>
@@ -368,9 +390,15 @@
     <history-entry file="AddressTest_testAddressDecodeFailed - 2020.08.01 at 10h 42m 22s.xml">
       <configuration name="AddressTest.testAddressDecodeFailed" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TxTest_testBuildTx3 - 2020.08.28 at 14h 14m 49s.xml">
+      <configuration name="TxTest.testBuildTx3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TxTest_testBuildTx - 2020.08.28 at 16h 21m 27s.xml">
+      <configuration name="TxTest.testBuildTx" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43552000" />
+    <option name="totallyTimeSpent" value="47782000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -383,21 +411,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32923076" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32923076" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32923076" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32923076" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32923076" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28410256" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2936508" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30830282" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -408,7 +438,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32923076" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -423,7 +452,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -441,38 +470,20 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/yeeco/yeesigner/KeyPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1005">
+            <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TxTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SingerTest.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/yeeco/yeesigner/SignerException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/yeeco/yeesigner/JNI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="54" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="54" />
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -765,27 +776,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="617">
+            <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="105">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TxTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="192">
-            <caret line="65" column="122" selection-start-line="65" selection-start-column="60" selection-end-line="65" selection-end-column="122" />
-          </first_editor>
-          <second_editor />
+        <state relative-caret-position="830">
+          <caret line="125" column="28" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="28" />
         </state>
       </provider>
     </entry>

@@ -6,4 +6,6 @@ Yee signer provides the following binds:
 
  - [Java](./java)
  - [Objective-C](./oc)
+ - [Pure JavaScript](./purejs)
+ - [Pure Java](./purejava)
  
