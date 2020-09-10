@@ -2,6 +2,7 @@ import io.yeeco.yeesigner.CodecUtils;
 import org.apache.commons.codec.binary.Hex;
 import org.javatuples.Pair;
 import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
 

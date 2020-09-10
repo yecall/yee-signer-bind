@@ -1,11 +1,7 @@
 import io.yeeco.yeesigner.Address;
-import io.yeeco.yeesigner.Call;
-
 import org.apache.commons.codec.binary.Hex;
 import org.javatuples.Pair;
 import org.junit.Test;
-
-import java.io.*;
 
 import static org.junit.Assert.assertEquals;
 

@@ -1,6 +1,7 @@
 package io.yeeco.yeesigner;
 
-import com.debuggor.schnorrkel.sign.*;
+import com.debuggor.schnorrkel.sign.PrivateKey;
+import com.debuggor.schnorrkel.sign.Signature;
 
 public class KeyPair {
 
@@ -21,7 +22,7 @@ public class KeyPair {
             throw new SignerException(ErrorUtils.ERR_INVALID_MINI_SECRET_KEY);
         }
 
-        com.debuggor.schnorrkel.sign.KeyPair keyPair = com.debuggor.schnorrkel.sign.KeyPair.fromSecretSeed(miniSecretKey, ExpansionMode.Ed25519);
+        com.debuggor.schnorrkel.sign.KeyPair keyPair = com.debuggor.schnorrkel.sign.KeyPair.fromSecretSeed(miniSecretKey);
 
         KeyPair instance = new KeyPair();
         instance.keyPair = keyPair;
@@ -50,13 +51,11 @@ public class KeyPair {
         return null;
     }
 
-    public byte[] sign(byte[] message, byte[] ctx) throws SignerException {
+    public byte[] sign(byte[] message) throws SignerException {
 
         byte[] sign = null;
         try {
-            SigningContext ctxObj = SigningContext.createSigningContext(ctx);
-            SigningTranscript t = ctxObj.bytes(message);
-            Signature signature = keyPair.sign(t);
+            Signature signature = keyPair.sign(message);
             sign = signature.to_bytes();
         } catch (Exception e) {
             throw new SignerException(ErrorUtils.ERR_INVALID_SIGNATURE);

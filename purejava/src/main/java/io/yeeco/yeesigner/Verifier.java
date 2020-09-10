@@ -1,8 +1,6 @@
 package io.yeeco.yeesigner;
 
 import com.debuggor.schnorrkel.sign.KeyPair;
-import com.debuggor.schnorrkel.sign.SigningContext;
-import com.debuggor.schnorrkel.sign.SigningTranscript;
 
 public class Verifier {
 
@@ -24,14 +22,12 @@ public class Verifier {
     }
 
 
-    public void verify(byte[] signature, byte[] message, byte[] ctx) throws SignerException {
+    public void verify(byte[] signature, byte[] message) throws SignerException {
 
         boolean verify = false;
         try {
-            SigningContext ctxObj = SigningContext.createSigningContext(ctx);
-            SigningTranscript t = ctxObj.bytes(message);
             KeyPair fromPublicKey = KeyPair.fromPublicKey(keyPair.getPublicKey().toPublicKey());
-            verify = fromPublicKey.verify(t, signature);
+            verify = fromPublicKey.verify(message, signature);
         }catch (Exception e){
             throw new SignerException(ErrorUtils.ERR_INVALID_SIGNATURE);
         }

@@ -1,8 +1,7 @@
-import io.yeeco.yeesigner.*;
+import io.yeeco.yeesigner.Call;
+import io.yeeco.yeesigner.Tx;
 import org.apache.commons.codec.binary.Hex;
 import org.junit.Test;
-
-import java.io.*;
 
 import static org.junit.Assert.assertEquals;
 

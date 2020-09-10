@@ -72,13 +72,13 @@ public class SingerTest {
 
         byte[] message = new byte[]{1, 2, 3};
 
-        byte[] ctx = new byte[]{};
+        byte[] signature = keyPair.sign(message);
 
-        byte[] signature = keyPair.sign(message, ctx);
+        System.out.println(Hex.encodeHexString(signature));
 
         Verifier verifier = Verifier.fromPublicKey(keyPair.getPublicKey());
 
-        verifier.verify(signature, message, ctx);
+        verifier.verify(signature, message);
 
     }
 
@@ -90,9 +90,7 @@ public class SingerTest {
 
         byte[] message = new byte[]{1, 2, 3};
 
-        byte[] ctx = new byte[]{};
-
-        byte[] signature = keyPair.sign(message, ctx);
+        byte[] signature = keyPair.sign(message);
 
         Verifier verifier = Verifier.fromPublicKey(keyPair.getPublicKey());
 
@@ -100,7 +98,7 @@ public class SingerTest {
 
         boolean ok = false;
         try {
-            verifier.verify(signature, message, ctx);
+            verifier.verify(signature, message);
             ok = true;
         } catch (Exception e) {
         }

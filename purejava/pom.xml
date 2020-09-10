@@ -32,7 +32,7 @@
         <dependency>
             <groupId>com.github.yeeco</groupId>
             <artifactId>schnorrkel-java</artifactId>
-            <version>v1.0.4</version>
+            <version>v0.1.1.2</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->

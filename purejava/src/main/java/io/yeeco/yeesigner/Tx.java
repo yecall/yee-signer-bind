@@ -8,8 +8,6 @@ import java.security.MessageDigest;
 
 public class Tx {
 
-    private final static byte[] CTX = "substrate".getBytes();
-
     private Call call;
     private byte[] secretKey;
     private long nonce;
@@ -60,7 +58,7 @@ public class Tx {
             payload = blake2b256(payload);
         }
 
-        byte[] signature = keyPair.sign(payload, CTX);
+        byte[] signature = keyPair.sign(payload);
 
         out.write(signature, 0, signature.length);
         out.write(nonceBytes, 0, nonceBytes.length);

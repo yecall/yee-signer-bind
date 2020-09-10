@@ -19,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="617">
+              <first_editor relative-caret-position="1005">
                 <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
               </first_editor>
               <second_editor />
@@ -30,8 +30,17 @@
       <file leaf-file-name="TxTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TxTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="830">
-              <caret line="125" column="28" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="28" />
+            <state relative-caret-position="362">
+              <caret line="144" column="316" selection-start-line="144" selection-start-column="316" selection-end-line="144" selection-end-column="316" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SingerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SingerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
             </state>
           </provider>
         </entry>
@@ -66,6 +75,7 @@
       <find>charset</find>
       <find>pubic String</find>
       <find>b503</find>
+      <find>0b58d672927e01314d624fcb834a0f04b554f37640e0a4c342029a996ec1450bac8afb286e210d3afbfb8fd429129bd33329baaea6b919c92651c072c59d2408</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -76,7 +86,6 @@
         <option value="$PROJECT_DIR$/src/main/java/io/yeeco/yeesigner/Verifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/yeeco/yeesigner/Call.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/yeeco/yeesigner/KeyPair.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SingerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/yeeco/yeesigner/JNI.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/yeeco/yeesigner/ErrorUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/yeeco/yeesigner/Utils.java" />
@@ -84,8 +93,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/io/yeeco/yeesigner/Address.java" />
         <option value="$PROJECT_DIR$/src/test/java/AddressTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TxTest.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/test/java/SingerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TxTest.java" />
       </list>
     </option>
   </component>
@@ -95,7 +105,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
@@ -104,9 +114,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,6 +148,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -180,7 +190,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TxTest.testBuildTx">
+  <component name="RunManager" selected="JUnit.TxTest.testVerifyTx">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -201,13 +211,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="AddressTest.testAddressEncodeFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SingerTest.testKeyPairSignVerify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="yeesigner" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddressTest" />
-      <option name="METHOD_NAME" value="testAddressEncodeFailed" />
+      <option name="MAIN_CLASS_NAME" value="SingerTest" />
+      <option name="METHOD_NAME" value="testKeyPairSignVerify" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -308,19 +318,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.AddressTest.testAddressEncodeFailed" />
       <item itemvalue="JUnit.AddressTest.testAddressDecodeFailed" />
       <item itemvalue="JUnit.TxTest.testVerifyTx" />
       <item itemvalue="JUnit.TxTest.testBuildTx3" />
       <item itemvalue="JUnit.TxTest.testBuildTx" />
+      <item itemvalue="JUnit.SingerTest.testKeyPairSignVerify" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TxTest.testVerifyTx" />
+        <item itemvalue="JUnit.SingerTest.testKeyPairSignVerify" />
         <item itemvalue="JUnit.TxTest.testBuildTx" />
         <item itemvalue="JUnit.TxTest.testBuildTx3" />
-        <item itemvalue="JUnit.TxTest.testVerifyTx" />
         <item itemvalue="JUnit.AddressTest.testAddressDecodeFailed" />
-        <item itemvalue="JUnit.AddressTest.testAddressEncodeFailed" />
       </list>
     </recent_temporary>
   </component>
@@ -361,29 +371,12 @@
       <workItem from="1597401505138" duration="49000" />
       <workItem from="1597980250467" duration="39000" />
       <workItem from="1598063255175" duration="39000" />
-      <workItem from="1598580448599" duration="4103000" />
+      <workItem from="1598580448599" duration="4244000" />
+      <workItem from="1599706798880" duration="836000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AddressTest_testAddressEncode - 2020.08.01 at 10h 34m 50s.xml">
-      <configuration name="AddressTest.testAddressEncode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AddressTest_testAddressEncode - 2020.08.01 at 10h 35m 18s.xml">
-      <configuration name="AddressTest.testAddressEncode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AddressTest - 2020.08.01 at 10h 37m 28s.xml">
-      <configuration name="AddressTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AddressTest_testAddressDecode - 2020.08.01 at 10h 39m 43s.xml">
-      <configuration name="AddressTest.testAddressDecode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AddressTest_testAddressDecode - 2020.08.01 at 10h 40m 37s.xml">
-      <configuration name="AddressTest.testAddressDecode" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AddressTest_testAddressEncodeFailed - 2020.08.01 at 10h 40m 55s.xml">
-      <configuration name="AddressTest.testAddressEncodeFailed" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AddressTest_testAddressEncodeFailed - 2020.08.01 at 10h 41m 35s.xml">
       <configuration name="AddressTest.testAddressEncodeFailed" configurationId="JUnit" />
     </history-entry>
@@ -396,9 +389,27 @@
     <history-entry file="TxTest_testBuildTx - 2020.08.28 at 16h 21m 27s.xml">
       <configuration name="TxTest.testBuildTx" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TxTest_testVerifyTx - 2020.09.10 at 11h 02m 27s.xml">
+      <configuration name="TxTest.testVerifyTx" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TxTest_testVerifyTx - 2020.09.10 at 11h 03m 01s.xml">
+      <configuration name="TxTest.testVerifyTx" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingerTest_testKeyPairSignVerify - 2020.09.10 at 11h 04m 44s.xml">
+      <configuration name="SingerTest.testKeyPairSignVerify" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingerTest_testKeyPairSignVerify - 2020.09.10 at 15h 50m 10s.xml">
+      <configuration name="SingerTest.testKeyPairSignVerify" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SingerTest_testKeyPairSignVerify - 2020.09.10 at 15h 50m 54s.xml">
+      <configuration name="SingerTest.testKeyPairSignVerify" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TxTest_testVerifyTx - 2020.09.10 at 15h 51m 05s.xml">
+      <configuration name="TxTest.testVerifyTx" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47782000" />
+    <option name="totallyTimeSpent" value="48759000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -427,7 +438,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.28410256" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30830282" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31196582" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -435,8 +446,8 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32967034" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -470,6 +481,30 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1005">
+            <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TxTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="125" column="28" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -685,13 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SingerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="47" column="43" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="47" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/io_yeeco_yeesigner_JNI.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -779,7 +807,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="617">
+          <first_editor relative-caret-position="1005">
             <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
           </first_editor>
           <second_editor />
@@ -793,10 +821,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SingerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TxTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
-          <caret line="125" column="28" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="28" />
+        <state relative-caret-position="362">
+          <caret line="144" column="316" selection-start-line="144" selection-start-column="316" selection-end-line="144" selection-end-column="316" />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,6 @@
 package io.yeeco.yeesigner;
 
 import com.google.common.primitives.Bytes;
-import org.apache.commons.codec.binary.Hex;
 import org.javatuples.Pair;
 
 public class Address {
